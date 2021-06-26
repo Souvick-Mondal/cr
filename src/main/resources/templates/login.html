@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Login</title>
+</head>
+<style>
+.left,.right {
+      height:70%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top:50;
+      overflow-x: hidden;
+      padding-top: 50px;
+	  
+   }
+   .left {
+	text-align: center;
+      left:0;
+      background-color: #BFEFFF;
+   }
+   .right {
+	text-align: center;
+      right:0;
+      background-color: #BCD2EE;
+   }
+   
+   </style>
+<body bgcolor="#BFEFFF">
+
+<table bgcolor="000033" cellspacing="10%" width="100%" cellpadding="-50%">
+<tr><td><h1><u><i><font color="white">BankgoOnline<p></i></u></h1><p></td>
+<td><font color="white" align="right"><b>INDIA</td>
+</tr>
+</table>
+<hr style="height:2px;border-width:7;color:blue;background-color:blue">
+
+<marquee bgcolor="#120885" height="35"><align="center">
+<font size="4" color="white"><b>Register yourself for Doorstep banking services by
+ loging on to the official sites and avail the services. 
+ Stay Home, Stay Safe.  
+ |  
+ In view of merger of 
+ IFSC codes of Indio Bank and Obc Bank with PND,
+ please delete existing beneficiaries with accounts in UBI and OBC and
+ re-register beneficiaries with new IFSC and account numbers.   |  
+ india.govenrment.in never asks for your Card/PIN/OTP/CVV details on phone, message or email. 
+ Please do not click on links received on your email or 
+ mobile asking your Bank/Card details. </b></font>
+ </align></marquee>
+ 
+	<div class="left">
+        <h1><u>Admin Login</u></h1>
+        <br>
+       <form action="/login-admin" method="post" modelAttribute="admin">
+			<table align="center">
+				<tr>
+					<td>Id:</td>
+					<td><input type="number" name="id" /></td>
+				</tr>
+			
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="password" /></td>
+				</tr>
+				<br>
+				<tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+        </form>
+		<br>
+        <a href="/new_add"> Signup</a>
+		<br><br>
+		
+		<p><font color="red"><u><b> THIS IS TOTALLY FOR INTERNAL EMPLOYEE ONLY</u></font></p>
+		<br><p> Click on <u>Signup</u> if you are a New Employee. And if an old an Employee
+		please <u>Login</u>Always remember being an employee of BankgoOnline and
+		your good service will make you a responsible citizen.</p></br>
+		</div>
+		
+
+    <div class="right">
+        <h1><u>User Login</u></h1>
+        <br>
+       <form action="/login-user" method="post" modelAttribute="admin">
+			<table align="center">
+				<tr>
+					<td>Id:</td>
+					<td><input type="number" name="id" /></td>
+				</tr>
+			
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="password" /></td>
+				</tr>
+				
+				<tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+				
+				
+            </table>
+			<br><br>
+			<p> Welcome to BankgoOnline !!!!!!
+				<p>Thanks for being a part of our bank.
+				We promise to provide the best possible services.
+        </form>
+        
+    </div>
+
+</body>
+</html>

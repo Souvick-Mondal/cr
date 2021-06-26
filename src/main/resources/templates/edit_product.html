@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit Account</title>
+</head>
+<style>
+table1{
+  width: 50%;
+  
+  font-size:20px;
+}
+
+tr {
+  height: 90px;
+  width: 50px;
+}
+button {
+  background-color: rgb(255, 255, 255); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+
+
+</style>
+<body bgcolor="##BFEFFF">
+<table bgcolor="000033" cellspacing="10%" width="100%" cellpadding="-50%">
+<tr><td><h1><u><i><font color="white">BankgoOnline<p></i></u></h1><p></td>
+<td><font color="white" align="right"><b>INDIA</td>
+</tr>
+</table>
+<hr style="height:2px;border-width:7;color:blue;background-color:blue">
+<br><br>
+	<div class="table1">
+        <h1 align="center">Edit Account</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+ 
+            <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+                <tr>             
+                    <td><b>ID:</td>
+                    <td>
+                        <input type="number" th:field="*{id}" readonly="readonly" />
+                    </td>
+                </tr>        
+                <tr>             
+                    <td><b>Full Name:</td>
+                    <td>
+                        <input type="text" th:field="*{fullName}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Balance:</td>
+                    <td><input type="number" th:field="*{balance}" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button type="submit">Update Details</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<style>
+
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+
+
+</style>
+<body bgcolor="#BFEFFF">
+
+<table bgcolor="000033" cellspacing="10%" width="100%" cellpadding="-50%">
+<tr><td><h1><u><i><font color="white">BankgoOnline<p></i></u></h1><p></td>
+<td><font color="white" align="right"><b>INDIA</td>
+</tr>
+</table>
+<hr style="height:2px;border-width:7;color:blue;background-color:blue">
+<h1>Welcome</h1>
+<h3 align="right"><a href="/">Logout</a></h3>
+<div class="filter">
+<table  cellpadding="10" align="center" border=2px>
+<tr>
+
+    
+                <th><font="black"><b>Full Name</th>
+                <th><font="black"><b>Balance</th>
+                </tr>
+ <tbody>
+ <tr>
+<td th:text="${product}"></td>
+
+<td th:text="${balance}"></td>
+
+</tr>
+</tbody>
+</table>
+<a th:href="@{/userMoney}">Send Money</a>
+</div>
+
+</body>
+</html>

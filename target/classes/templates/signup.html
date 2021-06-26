@@ -1,0 +1,102 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>registration form</title>
+<style>
+*{
+                font-family: sans-serif;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+                background: linear-gradient(to right,#BFFFFF 10%,#7BCBE6);
+            }
+
+            .form-wrapper{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 20px;
+                width: 400px;
+                padding:20px;
+                border: 1px solid #ffffff;
+                
+            }
+
+            h1{
+                color: Black;
+                
+                margin-bottom: 30px;
+            }
+
+            table{
+                color: black;
+                font-size: large;
+				border-color:black;
+            }
+
+            input{
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0px 10px 0;
+                background: linear-gradient(to right,#7BCBE6 10%,#2b8e8b);
+                border: 1px solid white;
+                border-radius: 5px;
+                color: #ffffff;
+                display: inline-block;
+            }
+            
+
+            button {
+  background: linear-gradient(to right,#BCD2EE 10%,#BFEFFF);
+  border-color:black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>    </head>
+
+    <body>
+	
+	<table bgcolor="000033" cellspacing="10%" width="100%" cellpadding="-50%">
+<tr><td><h1><u><i><font color="white">BankgoOnline<p></i></u></h1><p></td>
+<td><font color="white" align="right"><b>INDIA</td>
+</tr>
+</table>
+<hr style="height:2px;border-width:7;color:blue;background-color:blue">
+
+        <div class="form-wrapper">
+
+            <h1>Sign up</h1>
+            
+            <form action="/save_faculty" method="post" modelAttribute="admin">
+			<table border="2" align="center">
+				<tr>
+					<td align="center"><b>Id:</td>
+					<td><input type="number" name="id" /></td>
+				</tr>
+			<tr>
+					<td align="center"><b>Name:</td>
+					<td><input type="text" name="fullName" /></td>
+				</tr>
+				<tr>
+					<td align="center"><b>Password:</td>
+					<td><input type="password" name="password" /></td>
+				</tr>
+				 <tr>
+                    <td colspan="2" align="center" ><button type="submit">Save</button> </td>
+                </tr>
+                
+            </form>
+</div>
+</body>
+</html>
+

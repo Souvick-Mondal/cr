@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Bank</title>
+   </head>
+   <style>
+table1{
+  width: 50%;
+  
+  font-size:20px;
+}
+
+tr {
+  height: 50px;
+ 
+}
+button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+</style>
+   
+<body bgcolor="#BFEFFF">
+
+	<table bgcolor="000033" cellspacing="10%" width="100%" cellpadding="-50%">
+<tr><td><h1><u><i><font color="white">BankgoOnline<p></i></u></h1><p></td>
+<td><font color="white" align="right"><b>INDIA</td>
+</tr>
+</table>
+<hr style="height:2px;border-width:7;color:blue;background-color:blue">   
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+      <font align="center" size="5"><b><u>Withdraw Money</u></b></font>
+       <div class="table1">
+      <div th:if="${errorMessage!=null}"
+           style="color:red;font-style:italic" th:utext="${errorMessage}">..</div>
+       
+      <form th:action="@{/withdraw}" th:object="${withdraw}" method="POST">
+         <table align="center" cellspacing="100" cellpadding="5" bgcolor="7BCBE6">
+ 
+           <tr>
+              <td><b><font size="4">Bank Account Id</td>
+              <td><input type="number" th:field="*{accountId}"/></td>
+           </tr>
+           <tr>
+              <td><b><font size="4">Amount</td>
+              <td><input type="number" th:field="*{amount}" /></td>
+           </tr>           
+           <tr>
+              <td>&nbsp;</td>
+              <td><input type="submit" value="Withdraw"/></td>
+           </tr>       
+         </table>      
+      </form>
+	  </div>
+       
+   </body>
+</html>

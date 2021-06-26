@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Bank</title>
+   </head>
+   
+    
+  <body bgcolor="#BFEFFF">
+
+	<table bgcolor="000033" cellspacing="10%" width="100%" cellpadding="-50%">
+<tr><td><h1><u><i><font color="white">BankgoOnline<p></i></u></h1><p></td>
+<td><font color="white" align="right"><b>INDIA</td>
+</tr>
+</table>
+<hr style="height:2px;border-width:7;color:blue;background-color:blue">
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+      <font size="5" align="center"><b><u>Online Money Transfer</u></b></font>
+       
+      <div th:if="${errorMessage!=null}"
+           style="color:red;font-style:italic" th:utext="${errorMessage}"></div>
+       
+      <form th:action="@{/deposit}" th:object="${deposit}" method="POST">
+         <table align="center" cellspacing="100" cellpadding="5" bgcolor="7BCBE6">
+ 
+           <tr>
+              <td><b><font size="4" color="Black">Account Number</font></b></td>
+              <td><input type="number" th:field="*{accountId}"/></td>
+           
+              <td><b><font size="4" color="Black">Amount</font></b></td>
+              <td><input type="number" th:field="*{amount}" /></td>
+           </tr>           
+           <tr>
+              <td>&nbsp;</td>
+			  
+              <td align="center"><input type="submit" value="Deposit"/></td>
+           </tr>       
+         </table>      
+      </form>
+	  
+	  <h3><b>What is Money Transfer Online?</b></h3>
+	<p><font size="4" color="black">Online money transfers have now become a medium to 
+	  save oneself from any cash shortage related problems. 
+	  A long list of requirements and legal formalities is no 
+	  longer needed since the money can be transferred online without any hassle. Hence, transferring money 
+	  online has become easier than before with BankgoOnline .
+	  Just make instant money transfer with the Online Transfer feature on BankgoOnline, 
+	  </font>
+       
+
+   </body>
+</html>
